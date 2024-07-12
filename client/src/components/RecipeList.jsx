@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 function RecipeList({ allIngredients }) {
-  const apiKey = 'ba1a78b65c514294a2d6e40e8d15fb54'; // Replace with your actual API key
+  const apiKey = 'my_api_key'
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
