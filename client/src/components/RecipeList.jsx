@@ -11,7 +11,7 @@ function RecipeList({ allIngredients }) {
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
-        // Sort recipes by the least unused and missing ingredients
+        
         const sortedRecipes = data.sort((a, b) => {
           const aMissing = a.missedIngredientCount + a.unusedIngredients.length;
           const bMissing = b.missedIngredientCount + b.unusedIngredients.length;
