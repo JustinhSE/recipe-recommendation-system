@@ -4,9 +4,11 @@ import React, { useEffect, useState } from 'react';
 function RecipeList({ allIngredients }) {
   const apiKey = 'my_api_key'
   const [recipes, setRecipes] = useState([]);
+  const sendToAPI = allIngredients.join(',')
+
 
   useEffect(() => {
-    const apiUrl = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${allIngredients.join(',')}&apiKey=${apiKey}`;
+    const apiUrl = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${sendtoAPI})}&apiKey=${apiKey}`;
 
     fetch(apiUrl)
       .then((response) => response.json())
