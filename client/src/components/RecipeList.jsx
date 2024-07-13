@@ -8,7 +8,7 @@ function RecipeList({ allIngredients }) {
 
 
   useEffect(() => {
-    const apiUrl = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${sendtoAPI})}&apiKey=${apiKey}`;
+    const apiUrl = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${sendToAPI})}&apiKey=${apiKey}`;
 
     fetch(apiUrl)
       .then((response) => response.json())
