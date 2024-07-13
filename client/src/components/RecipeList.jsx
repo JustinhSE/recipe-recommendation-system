@@ -1,13 +1,15 @@
-// RecipeList.jsx
+import updateRecipeHistory from './../userData/updateRecipeHistory.jsx'
 import React, { useEffect, useState } from 'react';
 
 function RecipeList({ allIngredients }) {
-  const apiKey = 'ba1a78b65c514294a2d6e40e8d15fb54'; // Replace with your actual API key
+  const apiKey = '21f9b72311cd4dc2a1f5a17e12766132'; 
   const [recipes, setRecipes] = useState([]);
+  const sendToAPI = allIngredients.join(',')
 
   useEffect(() => {
-    const apiUrl = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${allIngredients.join(',')}&apiKey=${apiKey}`;
+    const apiUrl = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${sendToAPI}&apiKey=${apiKey}`;
 
+    
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
@@ -19,11 +21,13 @@ function RecipeList({ allIngredients }) {
         });
 
         setRecipes(sortedRecipes);
+        updateRecipeHistory(allIngredients, recipes);
       })
       .catch((error) => {
         console.error('Error fetching recipes:', error);
       });
   }, [allIngredients]);
+  
 
   return (
     <ul>
