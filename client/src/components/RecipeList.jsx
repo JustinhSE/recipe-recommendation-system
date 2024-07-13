@@ -2,18 +2,17 @@ import updateRecipeHistory from './../userData/updateRecipeHistory.jsx'
 import React, { useEffect, useState } from 'react';
 
 function RecipeList({ allIngredients }) {
-  const apiKey = '21f9b72311cd4dc2a1f5a17e12766132'; 
+  const apiKey = 'my_api_key'
   const [recipes, setRecipes] = useState([]);
   const sendToAPI = allIngredients.join(',')
 
-  useEffect(() => {
-    const apiUrl = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${sendToAPI}&apiKey=${apiKey}`;
 
-    
+  useEffect(() => {
+    const apiUrl = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${sendtoAPI})}&apiKey=${apiKey}`;
+
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
-        // Sort recipes by the least unused and missing ingredients
         const sortedRecipes = data.sort((a, b) => {
           const aMissing = a.missedIngredientCount + a.unusedIngredients.length;
           const bMissing = b.missedIngredientCount + b.unusedIngredients.length;
