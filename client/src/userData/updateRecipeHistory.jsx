@@ -1,5 +1,4 @@
 import React from 'react';
-import { auth, signInWithGooglePopup, app} from './../services/firebase'
 import { getFirestore, collection, addDoc, getDocs } from 'firebase/firestore';
 import Login from './../components/Login';
 
@@ -10,8 +9,7 @@ async function updateRecipeHistory({ingredients = [], recipes = [], userData = {
         return;
     } 
     //upload payload to firebase
-    const db = getFirestore(app);
-
+   
     const { userId } = Login();
     console.log('APP login User ID', userId);
 

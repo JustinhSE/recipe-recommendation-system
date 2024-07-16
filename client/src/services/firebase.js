@@ -51,7 +51,7 @@ provider.setCustomParameters({
 const auth = getAuth();
 const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 
-export { auth, signInWithGooglePopup, app};
+export { auth, signInWithGooglePopup};
 
 
 // // Get a list of cities from your database
