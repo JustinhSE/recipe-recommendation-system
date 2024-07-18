@@ -11,7 +11,6 @@ function App() {
   const addRecipeToArr = (ingredients) => {
     setRecipes(ingredients);
   };
-  console.log("Sign in", Login);
   const { userId, SignInButton } = Login();
   console.log('APP login User ID', userId);
  

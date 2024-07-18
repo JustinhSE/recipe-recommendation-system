@@ -52,13 +52,5 @@ provider.setCustomParameters({
 const auth = getAuth();
 const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 
-export { auth, signInWithGooglePopup};
+export { auth, signInWithGooglePopup, db};
 
-
-// // Get a list of cities from your database
-// async function getRecipes(db) {
-//   const citiesCol = collection(db, 'cities');
-//   const citySnapshot = await getDocs(citiesCol);
-//   const cityList = citySnapshot.docs.map(doc => doc.data());
-//   return cityList;
-// }
