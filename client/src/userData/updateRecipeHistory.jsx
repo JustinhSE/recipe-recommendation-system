@@ -1,8 +1,8 @@
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../services/firebase';
 
-const updateRecipeHistory = async (allIngredients, recipes) => {
-    const recipesForFirestore = recipes.map(recipe => ({
+const updateRecipeHistory = async (userid = '', allIngredients = [] , recipes = [] ) => {
+    const mappedRecipes = recipes.map(recipe => ({
         title: recipe.title,
         image: recipe.image,
         usedIngredientCount: recipe.usedIngredientCount,
@@ -14,14 +14,13 @@ const updateRecipeHistory = async (allIngredients, recipes) => {
     try {
         const docRef = await addDoc(collection(db, "recipeHistory"), {
             ingredients: allIngredients,
-            recipes: recipesForFirestore,
+            recipes: mappedRecipes,
+            // userID: userId,
             //to do userID: userId 
         });
-
         console.log("Document written with ID: ", docRef.id);
     } catch (e) {
         console.error("Error adding document: ", e);
     }
-    
 };
 export default updateRecipeHistory; 

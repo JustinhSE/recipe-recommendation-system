@@ -2,7 +2,7 @@ import updateRecipeHistory from './../userData/updateRecipeHistory.jsx'
 import React, { useEffect, useState } from 'react';
 
 function RecipeList({ allIngredients }) {
-  const apiKey = apikey; 
+  const apiKey = import.meta.env.RECIPE_KEY; 
   const [recipes, setRecipes] = useState([]);
   const sendToAPI = allIngredients.join(',')
 
@@ -20,7 +20,7 @@ function RecipeList({ allIngredients }) {
         });
 
         setRecipes(sortedRecipes);
-        updateRecipeHistory(allIngredients, recipes);
+        updateRecipeHistory(null, allIngredients, recipes);
       })
       .catch((error) => {
         console.error('Error fetching recipes:', error);
