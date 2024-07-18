@@ -22,5 +22,6 @@ const updateRecipeHistory = async (allIngredients, recipes) => {
     } catch (e) {
         console.error("Error adding document: ", e);
     }
+    
 };
 export default updateRecipeHistory; 
