@@ -2,7 +2,7 @@ import updateRecipeHistory from './../userData/updateRecipeHistory.jsx'
 import React, { useEffect, useState } from 'react';
 
 function RecipeList({ allIngredients }) {
-  const apiKey = '21f9b72311cd4dc2a1f5a17e12766132'; 
+  const apiKey = apikey; 
   const [recipes, setRecipes] = useState([]);
   const sendToAPI = allIngredients.join(',')
 
