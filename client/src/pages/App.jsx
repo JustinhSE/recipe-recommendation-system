@@ -6,6 +6,7 @@ import Navbar from '../components/navbar.jsx';
 import {useDropzone} from 'react-dropzone'
 import './App.css'
 import ImageUpload from '../userData/ImageUpload.jsx';
+import SearchHistory from '../components/SearchHistory.jsx';
 
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
       <Navbar />
       <AddInput addInput={addRecipeToArr} />
       <RecipeList allIngredients={recipes} />
-      <ImageUpload />
+      {/* <ImageUpload /> */}
+      {/* <SearchHistory /> */}
     </main>
   );
   
