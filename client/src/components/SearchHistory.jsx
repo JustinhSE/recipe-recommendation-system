@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../services/firebase';
-import RecipeList from './RecipeList'; // Adjust the path as needed
-
+import RecipeList from './RecipeList'; // Use this - task 
+ 
 const SearchHistory = () => {
   const [searchHistory, setSearchHistory] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
