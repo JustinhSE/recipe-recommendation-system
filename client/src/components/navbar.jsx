@@ -32,7 +32,7 @@ const Navbar = () => {
             {userPhoto && (
                 <div className="flex items-center space-x-4">
                     <div className="border-r border-gray-400 opacity-50 h-6"></div>
-                    <button onClick={handleSignOut} className="text-xl font-grandstander text-gray-800">Sign Out</button>
+                    <button onClick={handleSignOut} className="text-xl font-grandstander hover:bg-gray-100 text-gray-800  py-2  ">Sign Out</button>
                     <img src={userPhoto} alt="User profile" className="w-10 h-10 rounded-full" />
                 </div>
             )}

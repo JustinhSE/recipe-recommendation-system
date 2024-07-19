@@ -26,8 +26,8 @@ function Login() {
 
   const SignInButton = () => {
     return (
-      <button onClick={logGoogleUser} className="flex items-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-        <img src="https://icon2.cleanpng.com/20180423/rjw/kisspng-google-logo-logo-logo-5ade7dc7134299.2873015115245306310789.jpg" alt="Google Logo" className="h-5 mr-2" />
+      <button onClick={logGoogleUser} className="text-xl font-grandstander hover:bg-gray-100 text-gray-800  py-2 px-4 rounded">
+        {/* <img src="https://p7.hiclipart.com/preview/344/344/59/google-logo-g-suite-google.jpg" alt="Google Logo" className="h-5 mr-2" /> */}
         Sign In
       </button>
     );
