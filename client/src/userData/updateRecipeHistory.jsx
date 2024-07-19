@@ -1,7 +1,7 @@
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../services/firebase';
 
-const updateRecipeHistory = async (userid = '', allIngredients = [] , recipes = [] ) => {
+const updateRecipeHistory = async (allIngredients, recipes ) => {
     const mappedRecipes = recipes.map(recipe => ({
         title: recipe.title,
         image: recipe.image,

@@ -1,4 +1,3 @@
-// Login.jsx
 import { getAuth, signOut } from 'firebase/auth';
 import { signInWithGooglePopup } from "../services/firebase";
 import updateRecipeHistory from './../userData/updateRecipeHistory.jsx'
@@ -11,7 +10,6 @@ function Login() {
   const logGoogleUser = async () => {
     const response = await signInWithGooglePopup();
     setUserId(response.user.uid);
-    updateRecipeHistory(response.user.uid);
   };
 
   const handleSignOut = async () => {

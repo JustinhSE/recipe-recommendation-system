@@ -30,4 +30,3 @@ const auth = getAuth();
 const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 
 export { auth, signInWithGooglePopup, db};
-

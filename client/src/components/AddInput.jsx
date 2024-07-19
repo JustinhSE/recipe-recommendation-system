@@ -43,7 +43,7 @@ function AddInput({ addInput }) {
         placeholder="What's in your pantry? (Separate ingredients with commas)"
       />
       <div ref={confettiRef}>
-      <button className="text-white text-xl font-bold rounded-xl bg-[#315C2B] mb-12 py-4 font-grandstander w-full" type="submit">          
+      <button className="text-white text-xl font-bold rounded-xl bg-[#315C2B] mb-6 py-4 font-grandstander w-full" type="submit">          
         Generate Recipe
         </button>
         <Confetti active={confettiActive} config={confettiConfig} />
