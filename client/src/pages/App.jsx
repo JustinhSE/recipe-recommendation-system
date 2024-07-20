@@ -3,10 +3,9 @@ import AddInput from '../components/AddInput.jsx';
 import RecipeList from '../components/RecipeList.jsx';
 import Login from '../components/Login.jsx';
 import Navbar from '../components/navbar.jsx';
-import {useDropzone} from 'react-dropzone'
-// import './App.css'
-import ImageUpload from '../userData/ImageUpload.jsx';
-import SearchHistory from '../components/SearchHistory.jsx';
+// import {useDropzone} from 'react-dropzone'
+// import ImageUpload from '../userData/ImageUpload.jsx';
+// import SearchHistory from '../components/SearchHistory.jsx';
 
 
 function App() {

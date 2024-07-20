@@ -15,8 +15,6 @@ const updateRecipeHistory = async (allIngredients, recipes ) => {
         const docRef = await addDoc(collection(db, "recipeHistory"), {
             ingredients: allIngredients,
             recipes: mappedRecipes,
-            // userID: userId,
-            //to do userID: userId 
         });
         console.log("Document written with ID: ", docRef.id);
     } catch (e) {
