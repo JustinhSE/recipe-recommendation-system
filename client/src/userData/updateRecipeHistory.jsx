@@ -4,7 +4,6 @@ import { db } from '../services/firebase';
 const updateRecipeHistory = async (allIngredients, recipes ) => {
     const mappedRecipes = recipes.map(recipe => ({
         title: recipe.title,
-        image: recipe.image,
         usedIngredientCount: recipe.usedIngredientCount,
         missedIngredientCount: recipe.missedIngredientCount,
         likes: recipe.likes,
@@ -16,7 +15,7 @@ const updateRecipeHistory = async (allIngredients, recipes ) => {
             ingredients: allIngredients,
             recipes: mappedRecipes,
         });
-        console.log("Document written with ID: ", docRef.id);
+        console.log("Document written with ID: ", docRef.id, mappedRecipes);
     } catch (e) {
         console.error("Error adding document: ", e);
     }
