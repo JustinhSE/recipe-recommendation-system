@@ -16,6 +16,7 @@ const App: React.FC = () => {
       <Navbar />
       <AddInput addInput={addRecipeToArr} />
       <RecipeList allIngredients={recipes} />
+      {/* <PhonePhoto />  */}
       {/* <ImageUpload /> */}
       {/* <SearchHistory /> */}
     </main>

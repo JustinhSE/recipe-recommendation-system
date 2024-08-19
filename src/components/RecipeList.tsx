@@ -98,8 +98,10 @@ const RecipeList: React.FC<RecipeListProps> = ({ allIngredients }) => {
           </li>
         ))}
       </ul>
+      
       {/* {url && window.location.assign(url)} */}
     </div>
+    
   );
 };
 
