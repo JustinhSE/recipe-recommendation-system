@@ -1,6 +1,5 @@
 import { useState, useRef } from 'react';
 import Confetti from 'react-dom-confetti';
-import Detector from './Images/Detector';
 
 function AddInput({ addInput }: { addInput: (ingredients: string[]) => void }) {
   const [textareaValue, setTextareaValue] = useState('');
@@ -35,7 +34,6 @@ function AddInput({ addInput }: { addInput: (ingredients: string[]) => void }) {
       <label className="text-2xl mt-4 mb-2 font-grandstander font-light text-[#315C2B]" htmlFor="notes-textarea">
         <center> Let's find a dish! </center> 
       </label>
-      <Detector /> 
       <textarea
         className="text-xl border border-gray-300 rounded-lg resize-none min-h-44 mb-4 px-4 py-2 font-light font-grandstander bg-[#FAFFFD] text-[#394053]"
         id="notes-textarea"
