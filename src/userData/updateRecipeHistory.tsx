@@ -1,6 +1,5 @@
-import { collection, addDoc } from 'firebase/firestore';
-import { db } from '../services/firebase';
-
+import { firestore } from "../services/firebase";
+import { collection, addDoc  } from "firebase/firestore";
 
 interface Recipe {
     id: number;
@@ -23,11 +22,11 @@ const updateRecipeHistory = async (allIngredients: string, recipes: Recipe[]) =>
     image: recipe.image,
   }));
 
+  
+
   try {
-    const docRef = await addDoc(collection(db, "recipeHistory"), {
-      ingredients: allIngredients,
-      recipes: mappedRecipes,
-    });
+    const docRef = await addDoc(collection(firestore, "recipeHistory"), {ingredients: allIngredients,
+        recipes: mappedRecipes, });
     console.log("Document written with ID: ", docRef.id, mappedRecipes);
   } catch (e) {
     console.error("Error adding document: ", e);

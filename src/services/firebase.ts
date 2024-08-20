@@ -14,9 +14,8 @@ const firebaseConfig = {
 };
 
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const firestore = getFirestore(app);
 
 //sign in
 const provider = new GoogleAuthProvider();
@@ -29,4 +28,4 @@ provider.setCustomParameters({
 const auth = getAuth();
 const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 
-export { auth, signInWithGooglePopup, db};
+export { auth, signInWithGooglePopup, app, firestore};
